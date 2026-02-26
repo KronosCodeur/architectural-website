@@ -1,0 +1,103 @@
+import { describe, it, expect } from 'vitest'
+import { existsSync } from 'node:fs'
+import { resolve } from 'node:path'
+
+const root = resolve(__dirname, '..')
+
+describe('Project Structure', () => {
+  describe('Root config files', () => {
+    const files = ['nuxt.config.ts', 'package.json', 'tsconfig.json', '.gitignore']
+    files.forEach(file => {
+      it(`${file} exists`, () => {
+        expect(existsSync(resolve(root, file))).toBe(true)
+      })
+    })
+  })
+
+  describe('App core files', () => {
+    it('app.vue exists', () => {
+      expect(existsSync(resolve(root, 'app/app.vue'))).toBe(true)
+    })
+
+    it('default layout exists', () => {
+      expect(existsSync(resolve(root, 'app/layouts/default.vue'))).toBe(true)
+    })
+
+    it('main.css exists', () => {
+      expect(existsSync(resolve(root, 'app/assets/css/main.css'))).toBe(true)
+    })
+  })
+
+  describe('Components', () => {
+    const components = [
+      'Navbar.vue',
+      'HeroSection.vue',
+      'ExpertiseSection.vue',
+      'ProjectsSection.vue',
+      'VisionSection.vue',
+      'ServiceBlock.vue',
+      'FooterSection.vue',
+    ]
+    components.forEach(comp => {
+      it(`${comp} exists`, () => {
+        expect(existsSync(resolve(root, 'app/components', comp))).toBe(true)
+      })
+    })
+  })
+
+  describe('Composables', () => {
+    it('useReveal.ts exists', () => {
+      expect(existsSync(resolve(root, 'app/composables/useReveal.ts'))).toBe(true)
+    })
+  })
+
+  describe('SVG Icons', () => {
+    const icons = [
+      'icon-conception.svg',
+      'icon-design-interieur.svg',
+      'icon-developpement.svg',
+      'icon-gestion-projet.svg',
+    ]
+    icons.forEach(icon => {
+      it(`${icon} exists`, () => {
+        expect(existsSync(resolve(root, 'app/assets/icons', icon))).toBe(true)
+      })
+    })
+  })
+
+  describe('Asset Images', () => {
+    const images = [
+      'hero-architecture.jpg',
+      'projet-villa-horizon.jpg',
+      'projet-tour-initiale.jpg',
+      'projet-penthouse-ciel.jpg',
+    ]
+    images.forEach(img => {
+      it(`${img} exists in app/assets/images/`, () => {
+        expect(existsSync(resolve(root, 'app/assets/images', img))).toBe(true)
+      })
+    })
+  })
+
+  describe('Public Assets', () => {
+    it('robots.txt exists', () => {
+      expect(existsSync(resolve(root, 'public/robots.txt'))).toBe(true)
+    })
+
+    it('favicon.ico exists', () => {
+      expect(existsSync(resolve(root, 'public/favicon.ico'))).toBe(true)
+    })
+
+    const publicImages = [
+      'hero-architecture.jpg',
+      'projet-villa-horizon.jpg',
+      'projet-tour-initiale.jpg',
+      'projet-penthouse-ciel.jpg',
+    ]
+    publicImages.forEach(img => {
+      it(`${img} exists in public/images/`, () => {
+        expect(existsSync(resolve(root, 'public/images', img))).toBe(true)
+      })
+    })
+  })
+})
