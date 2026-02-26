@@ -1,0 +1,351 @@
+/* =====================================================
+   TAURUS CONCEPT — Global Styles
+   @nuxt/ui v4 handles Tailwind CSS injection
+   ===================================================== */
+
+/* ── Brand CSS Variables ── */
+:root {
+  --ivory: #F8F8F6;
+  --anthracite: #1C1C1C;
+  --gray-text: #5F5F5F;
+  --vert: #1F3D3A;
+  --vert-hover: #16302D;
+  --sable: #D6C6B8;
+  --sable-light: #F2ECE6;
+  --offwhite: #F1F1EE;
+  --font-heading: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* ── Base ── */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: var(--gray-text);
+  background-color: var(--ivory);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+/* ── Heading font ── */
+.font-heading {
+  font-family: var(--font-heading) !important;
+}
+
+/* ── Brand color utilities ── */
+.bg-ivory { background-color: var(--ivory) !important; }
+.bg-anthracite { background-color: var(--anthracite) !important; }
+.bg-vert { background-color: var(--vert) !important; }
+.bg-vert-hover { background-color: var(--vert-hover) !important; }
+.bg-sable { background-color: var(--sable) !important; }
+.bg-sable-light { background-color: var(--sable-light) !important; }
+.bg-offwhite { background-color: var(--offwhite) !important; }
+
+.text-ivory { color: var(--ivory) !important; }
+.text-anthracite { color: var(--anthracite) !important; }
+.text-gray-text { color: var(--gray-text) !important; }
+.text-vert { color: var(--vert) !important; }
+.text-sable { color: var(--sable) !important; }
+
+.border-vert { border-color: var(--vert) !important; }
+.border-sable { border-color: var(--sable) !important; }
+
+.hover\:bg-vert:hover { background-color: var(--vert) !important; }
+.hover\:bg-vert-hover:hover { background-color: var(--vert-hover) !important; }
+.hover\:border-vert:hover { border-color: var(--vert) !important; }
+.hover\:text-vert:hover { color: var(--vert) !important; }
+.hover\:text-anthracite:hover { color: var(--anthracite) !important; }
+
+/* ── Container ── */
+.container-brand {
+  max-width: 1280px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 8%;
+  padding-right: 8%;
+}
+@media (max-width: 1024px) {
+  .container-brand {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+
+/* ── Section spacing ── */
+.section-padding {
+  padding-top: 120px;
+  padding-bottom: 120px;
+}
+@media (max-width: 1024px) {
+  .section-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}
+
+/* ── Reveal animations ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.9s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-left {
+  opacity: 0;
+  transform: translateX(-60px);
+  transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-left.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.reveal-right {
+  opacity: 0;
+  transform: translateX(60px);
+  transition: opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Stagger children */
+.reveal-stagger > * {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s cubic-bezier(0.22, 1, 0.36, 1),
+              transform 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.reveal-stagger.is-visible > *:nth-child(1) { transition-delay: 0ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger.is-visible > *:nth-child(2) { transition-delay: 150ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger.is-visible > *:nth-child(3) { transition-delay: 300ms; opacity: 1; transform: translateY(0); }
+.reveal-stagger.is-visible > *:nth-child(4) { transition-delay: 450ms; opacity: 1; transform: translateY(0); }
+
+/* ── Hero animations ── */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.anim-fade-in {
+  animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes scaleIn {
+  from { transform: scale(1.08); }
+  to { transform: scale(1); }
+}
+.anim-scale-in {
+  animation: scaleIn 1.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+@keyframes lineGrow {
+  from { width: 0; }
+  to { width: 48px; }
+}
+.anim-line-grow {
+  animation: lineGrow 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation-delay: 0.3s;
+  width: 0;
+}
+
+@keyframes scrollPulse {
+  0%, 100% { opacity: 0.3; height: 24px; }
+  50% { opacity: 0.7; height: 36px; }
+}
+.anim-scroll-pulse {
+  animation: scrollPulse 2.5s ease-in-out infinite;
+}
+
+/* ── Decorative line ── */
+.line-accent {
+  display: inline-block;
+  width: 48px;
+  height: 1px;
+  background-color: var(--sable);
+}
+
+/* ── Eyebrow label ── */
+.eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gray-text);
+  font-weight: 500;
+}
+
+/* ── CTA button primary ── */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  background-color: var(--vert);
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.btn-primary:hover {
+  background-color: var(--vert-hover);
+}
+.btn-primary svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.3s ease;
+}
+.btn-primary:hover svg {
+  transform: translateX(4px);
+}
+
+/* ── CTA button outline ── */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  border: 1px solid var(--anthracite);
+  color: var(--anthracite);
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  text-decoration: none;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.btn-outline:hover {
+  background-color: var(--vert);
+  border-color: var(--vert);
+  color: white;
+}
+.btn-outline svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.3s ease;
+}
+.btn-outline:hover svg {
+  transform: translateX(4px);
+}
+
+/* ── CTA button white outline (hero) ── */
+.btn-outline-white {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 32px;
+  border: 1px solid rgba(255,255,255,0.4);
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-decoration: none;
+  background: transparent;
+  transition: all 0.3s ease;
+}
+.btn-outline-white:hover {
+  background-color: white;
+  color: var(--anthracite);
+}
+
+/* ── Underline links nav ── */
+.nav-link {
+  position: relative;
+  font-size: 13px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--gray-text);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: var(--vert);
+  transition: width 0.3s ease;
+}
+.nav-link:hover {
+  color: var(--anthracite);
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+
+/* ── Card hover ── */
+.card-expertise {
+  background: white;
+  padding: 48px 40px;
+  border-bottom: 2px solid var(--sable);
+  transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+}
+.card-expertise:hover {
+  border-bottom-color: var(--vert);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+
+/* ── Project card ── */
+.project-card {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+.project-card img {
+  transition: transform 1.2s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.project-card:hover img {
+  transform: scale(1.04);
+}
+.project-card .overlay-hover {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(31, 61, 58, 0.15);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.project-card:hover .overlay-hover {
+  opacity: 1;
+}
+.project-card .project-title {
+  transition: transform 0.5s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.project-card:hover .project-title {
+  transform: translateY(-4px);
+}
