@@ -1,5 +1,5 @@
 <template>
-  <footer style="background-color: var(--anthracite); padding-top: 80px; padding-bottom: 32px;">
+  <footer role="contentinfo" aria-label="Pied de page" style="background-color: var(--anthracite); padding-top: 80px; padding-bottom: 32px;">
     <div class="container-brand">
 
       <!-- Top grid -->
@@ -19,7 +19,7 @@
         </div>
 
         <!-- Navigation column -->
-        <div>
+        <nav aria-label="Navigation secondaire">
           <h4 style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 600; color: white; margin-bottom: 24px;">Navigation</h4>
           <div style="display: flex; flex-direction: column; gap: 12px;">
             <NuxtLink
@@ -31,10 +31,10 @@
               {{ link.label }}
             </NuxtLink>
           </div>
-        </div>
+        </nav>
 
         <!-- Contact column -->
-        <div>
+        <address style="font-style: normal;">
           <h4 style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.15em; font-weight: 600; color: white; margin-bottom: 24px;">Contact</h4>
           <div style="display: flex; flex-direction: column; gap: 10px; font-size: 14px; color: #BDBDBD;">
             <p>Boulevard du 13 Janvier</p>
@@ -42,7 +42,7 @@
             <p style="padding-top: 8px;">contact@taurusconcept.com</p>
             <p>+228 90 00 00 00</p>
           </div>
-        </div>
+        </address>
       </div>
 
       <!-- Bottom bar -->
