@@ -2,9 +2,16 @@
   <section style="position: relative; display: flex; align-items: center; overflow: hidden; height: 100vh; min-height: 700px;">
     <!-- Background image with zoom animation -->
     <div style="position: absolute; inset: 0;">
-      <img
-        src="~/assets/images/hero-architecture.jpg"
-        alt="Architecture moderne de prestige"
+      <NuxtImg
+        src="/images/hero-architecture.jpg"
+        alt="Architecture moderne de prestige — Taurus Concept, cabinet d'architecture à Lomé"
+        format="webp"
+        quality="80"
+        width="1920"
+        height="1080"
+        sizes="100vw"
+        loading="eager"
+        fetchpriority="high"
         style="width: 100%; height: 100%; object-fit: cover;"
         :class="loaded ? 'anim-scale-in' : ''"
         :style="{ transform: loaded ? undefined : 'scale(1.08)' }"
