@@ -29,7 +29,7 @@
       :index="0"
     >
       <template #icon>
-        <SvgConception style="width: 48px; height: 48px;" />
+        <UIcon name="lucide:drafting-compass" size="48" style="color: var(--vert);" />
       </template>
     </ServiceBlock>
 
@@ -45,7 +45,7 @@
       reversed
     >
       <template #icon>
-        <SvgGestionProjet style="width: 48px; height: 48px;" />
+        <UIcon name="lucide:gantt-chart" size="48" style="color: var(--vert);" />
       </template>
     </ServiceBlock>
 
@@ -60,7 +60,7 @@
       :index="2"
     >
       <template #icon>
-        <SvgDeveloppement style="width: 48px; height: 48px;" />
+        <UIcon name="lucide:globe" size="48" style="color: var(--vert);" />
       </template>
     </ServiceBlock>
 
@@ -76,7 +76,7 @@
       reversed
     >
       <template #icon>
-        <SvgDesignInterieur style="width: 48px; height: 48px;" />
+        <UIcon name="lucide:layers" size="48" style="color: var(--vert);" />
       </template>
     </ServiceBlock>
 
@@ -102,10 +102,6 @@
 </template>
 
 <script setup lang="ts">
-import SvgConception from '~/assets/icons/icon-conception.svg'
-import SvgGestionProjet from '~/assets/icons/icon-gestion-projet.svg'
-import SvgDeveloppement from '~/assets/icons/icon-developpement.svg'
-import SvgDesignInterieur from '~/assets/icons/icon-design-interieur.svg'
 
 import { useStructuredData, breadcrumbSchema } from '~/composables/useStructuredData'
 

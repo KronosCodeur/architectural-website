@@ -1,23 +1,19 @@
 <script setup lang="ts">
-import IconConception from '~/assets/icons/icon-conception.svg'
-import IconGestionProjet from '~/assets/icons/icon-gestion-projet.svg'
-import IconDeveloppement from '~/assets/icons/icon-developpement.svg'
-
 const expertises = [
   {
-    icon: IconConception,
+    icon: 'lucide:drafting-compass',
     title: 'Conception',
     description:
       'Création de plans architecturaux sur-mesure alliant esthétique intemporelle et fonctionnalité rigoureuse.',
   },
   {
-    icon: IconGestionProjet,
+    icon: 'lucide:gantt-chart',
     title: 'Gestion de Projet',
     description:
       'Supervision complète du chantier, garantissant le respect des délais, du budget et de la vision initiale.',
   },
   {
-    icon: IconDeveloppement,
+    icon: 'lucide:globe',
     title: 'Développement International',
     description:
       'Accompagnement stratégique pour vos investissements immobiliers à travers le monde.',
@@ -49,7 +45,7 @@ const expertises = [
         >
           <!-- Icon -->
           <div style="width: 56px; height: 56px; display: flex; align-items: center; justify-content: center; margin-bottom: 32px;">
-            <component :is="item.icon" style="width: 32px; height: 32px;" />
+            <UIcon :name="item.icon" size="32" style="color: var(--vert);" />
           </div>
 
           <!-- Title -->
