@@ -10,6 +10,7 @@
 
     <!-- Main navigation -->
     <nav
+      aria-label="Navigation principale"
       :style="{
         backgroundColor: scrolled ? 'rgba(248,248,246,0.97)' : 'transparent',
         backdropFilter: scrolled ? 'blur(12px)' : 'none',
