@@ -13,9 +13,15 @@
         <!-- Image side -->
         <div :class="reversed ? 'reveal-right' : 'reveal-left'" class="service-image-col" style="position: relative;">
           <div style="overflow: hidden; border-radius: 2px;">
-            <img
+            <NuxtImg
               :src="image"
-              :alt="title"
+              :alt="`${title} — Service architecture Taurus Concept`"
+              format="webp"
+              quality="80"
+              width="640"
+              height="480"
+              sizes="(max-width: 1024px) 100vw, 50vw"
+              loading="lazy"
               style="width: 100%; height: auto; object-fit: cover; aspect-ratio: 4 / 3; transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);"
               @mouseenter="($event.target as HTMLElement).style.transform = 'scale(1.04)'"
               @mouseleave="($event.target as HTMLElement).style.transform = 'scale(1)'"
