@@ -34,7 +34,7 @@
           </div>
           <span
             class="font-heading"
-            :style="{ fontSize: '18px', fontWeight: 600, letterSpacing: '-0.02em', color: darkBg ? '#fff' : 'var(--anthracite)', transition: 'color 0.5s ease' }"
+            :style="{ fontSize: '18px', fontWeight: 600, letterSpacing: '-0.02em', color: darkBg ? '#fff' : 'var(--vert)', transition: 'color 0.5s ease' }"
           >
             Archi Design
           </span>
