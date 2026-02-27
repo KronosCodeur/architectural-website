@@ -4,7 +4,7 @@
     <div class="top-bar" style="background-color: var(--anthracite); color: rgba(255,255,255,0.5); font-size: 12px; padding: 8px 0;">
       <div class="container-brand" style="display: flex; justify-content: space-between; align-items: center;">
         <span>Lomé &bull; Accra &bull; Paris &bull; Dubaï</span>
-        <span>contact@taurusconcept.com</span>
+        <span>contact@archidesign.com</span>
       </div>
     </div>
 
@@ -23,10 +23,10 @@
         <!-- Logo -->
         <NuxtLink to="/" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
           <div style="width: 36px; height: 36px; border: 2px solid var(--vert); display: flex; align-items: center; justify-content: center;">
-            <span style="font-size: 12px; font-weight: 700; color: var(--vert);">TC</span>
+            <span style="font-size: 12px; font-weight: 700; color: var(--vert);">AD</span>
           </div>
           <span class="font-heading" style="font-size: 18px; font-weight: 600; color: var(--anthracite); letter-spacing: -0.02em;">
-            Taurus Concept
+            Archi Design
           </span>
         </NuxtLink>
 
