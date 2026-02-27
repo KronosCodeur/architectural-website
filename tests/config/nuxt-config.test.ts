@@ -39,6 +39,41 @@ describe('nuxt.config.ts', () => {
   })
 
   it('sets meta description', () => {
-    expect(configContent).toContain("L'excellence architecturale")
+    expect(configContent).toContain("architecture premium")
+  })
+
+  it('registers @nuxtjs/sitemap module', () => {
+    expect(configContent).toContain("'@nuxtjs/sitemap'")
+  })
+
+  it('sets htmlAttrs lang=fr', () => {
+    expect(configContent).toContain("lang: 'fr'")
+  })
+
+  it('configures Open Graph meta', () => {
+    expect(configContent).toContain("og:type")
+    expect(configContent).toContain("og:title")
+    expect(configContent).toContain("og:description")
+    expect(configContent).toContain("og:image")
+    expect(configContent).toContain("og:locale")
+  })
+
+  it('configures Twitter Card meta', () => {
+    expect(configContent).toContain("twitter:card")
+    expect(configContent).toContain("summary_large_image")
+  })
+
+  it('sets canonical URL', () => {
+    expect(configContent).toContain("rel: 'canonical'")
+  })
+
+  it('configures @nuxt/image with quality and formats', () => {
+    expect(configContent).toContain('quality: 80')
+    expect(configContent).toContain("'webp'")
+  })
+
+  it('configures sitemap', () => {
+    expect(configContent).toContain('sitemap:')
+    expect(configContent).toContain('taurusconcept.com')
   })
 })
