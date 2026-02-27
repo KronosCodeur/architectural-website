@@ -34,7 +34,7 @@ describe('Pages Structure', () => {
 
     it('sets page title', () => {
       expect(content).toContain('useHead')
-      expect(content).toContain('Taurus Concept')
+      expect(content).toContain('Archi Design')
     })
 
     it('initializes reveal animations', () => {
@@ -73,7 +73,7 @@ describe('Pages Structure', () => {
     })
 
     it('sets page title', () => {
-      expect(content).toContain('Services — Taurus Concept')
+      expect(content).toContain('Services — Archi Design')
     })
   })
 
@@ -100,7 +100,7 @@ describe('Pages Structure', () => {
     })
 
     it('sets page title', () => {
-      expect(content).toContain('Projets — Taurus Concept')
+      expect(content).toContain('Projets — Archi Design')
     })
   })
 
@@ -132,7 +132,7 @@ describe('Pages Structure', () => {
     })
 
     it('sets page title', () => {
-      expect(content).toContain('À Propos — Taurus Concept')
+      expect(content).toContain('À Propos — Archi Design')
     })
   })
 
@@ -183,7 +183,7 @@ describe('Pages Structure', () => {
     })
 
     it('sets page title', () => {
-      expect(content).toContain('Contact — Taurus Concept')
+      expect(content).toContain('Contact — Archi Design')
     })
   })
 })
