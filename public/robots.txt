@@ -1,5 +1,5 @@
-# Taurus Concept — Architecture & Design Premium
-# https://taurusconcept.com
+# Archi Design — Architecture & Design Premium
+# https://archidesign.com
 
 User-Agent: *
 Allow: /
@@ -7,4 +7,4 @@ Disallow: /_nuxt/
 Disallow: /api/
 
 # Sitemap
-Sitemap: https://taurusconcept.com/sitemap.xml
+Sitemap: https://archidesign.com/sitemap.xml
