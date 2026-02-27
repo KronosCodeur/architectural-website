@@ -107,7 +107,49 @@ import SvgGestionProjet from '~/assets/icons/icon-gestion-projet.svg'
 import SvgDeveloppement from '~/assets/icons/icon-developpement.svg'
 import SvgDesignInterieur from '~/assets/icons/icon-design-interieur.svg'
 
-useHead({ title: 'Services — Taurus Concept' })
+import { useStructuredData, breadcrumbSchema } from '~/composables/useStructuredData'
+
+const pageTitle = 'Services — Taurus Concept | Architecture & Design'
+const pageDesc = "Découvrez nos services : conception architecturale, gestion de projet, développement international et design d'intérieur. Expertise premium depuis Lomé, Togo."
+
+useHead({
+  title: pageTitle,
+  link: [{ rel: 'canonical', href: 'https://taurusconcept.com/services' }],
+})
+
+useSeoMeta({
+  title: pageTitle,
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogUrl: 'https://taurusconcept.com/services',
+  twitterTitle: pageTitle,
+  twitterDescription: pageDesc,
+})
+
+useStructuredData([
+  breadcrumbSchema([
+    { name: 'Accueil', url: 'https://taurusconcept.com/' },
+    { name: 'Services', url: 'https://taurusconcept.com/services' },
+  ]),
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Service',
+    'serviceType': 'Architectural Services',
+    'provider': { '@type': 'Organization', 'name': 'Taurus Concept', 'url': 'https://taurusconcept.com' },
+    'areaServed': ['Togo', 'Ghana', 'France', 'United Arab Emirates'],
+    'hasOfferCatalog': {
+      '@type': 'OfferCatalog',
+      'name': 'Services Architecturaux',
+      'itemListElement': [
+        { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Conception Architecturale', 'description': 'Création de plans architecturaux sur-mesure' } },
+        { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Gestion de Projet', 'description': 'Supervision complète du chantier' } },
+        { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': 'Développement International', 'description': 'Accompagnement stratégique pour investissements immobiliers' } },
+        { '@type': 'Offer', 'itemOffered': { '@type': 'Service', 'name': "Design d'Intérieur", 'description': "Architecture d'intérieur et mobilier sur mesure" } },
+      ],
+    },
+  },
+])
 
 const { init } = useReveal()
 
