@@ -49,6 +49,10 @@ describe('Project Structure', () => {
     it('useReveal.ts exists', () => {
       expect(existsSync(resolve(root, 'app/composables/useReveal.ts'))).toBe(true)
     })
+
+    it('useStructuredData.ts exists', () => {
+      expect(existsSync(resolve(root, 'app/composables/useStructuredData.ts'))).toBe(true)
+    })
   })
 
   describe('SVG Icons', () => {
@@ -84,8 +88,8 @@ describe('Project Structure', () => {
       expect(existsSync(resolve(root, 'public/robots.txt'))).toBe(true)
     })
 
-    it('favicon.ico exists', () => {
-      expect(existsSync(resolve(root, 'public/favicon.ico'))).toBe(true)
+    it('favicon.svg exists', () => {
+      expect(existsSync(resolve(root, 'public/favicon.svg'))).toBe(true)
     })
 
     const publicImages = [
