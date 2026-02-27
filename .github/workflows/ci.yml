@@ -23,19 +23,19 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
-          cache: npm
+          cache: yarn
 
       - name: Install dependencies
-        run: npm ci
+        run: yarn install --frozen-lockfile
 
       - name: Prepare Nuxt types
-        run: npx nuxi prepare
+        run: yarn nuxi prepare
 
       - name: Run tests
-        run: npx vitest run
+        run: yarn vitest run
 
       - name: Build project
-        run: npx nuxt build
+        run: yarn nuxt build
 
   typecheck:
     name: Type Check
@@ -49,13 +49,13 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 22
-          cache: npm
+          cache: yarn
 
       - name: Install dependencies
-        run: npm ci
+        run: yarn install --frozen-lockfile
 
       - name: Prepare Nuxt types
-        run: npx nuxi prepare
+        run: yarn nuxi prepare
 
       - name: Typecheck
-        run: npx nuxi typecheck
+        run: yarn nuxi typecheck
