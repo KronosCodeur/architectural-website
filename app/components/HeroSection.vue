@@ -4,7 +4,7 @@
     <div style="position: absolute; inset: 0;">
       <NuxtImg
         src="/images/hero-architecture.jpg"
-        alt="Architecture moderne de prestige — Taurus Concept, cabinet d'architecture à Lomé"
+        alt="Architecture moderne de prestige — Archi Design, cabinet d'architecture à Lomé"
         format="webp"
         :quality="80"
         width="1920"
