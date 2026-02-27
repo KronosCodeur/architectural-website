@@ -12,7 +12,7 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
-  modules: ['@nuxt/ui', 'nuxt-svgo', '@nuxt/image', '@nuxtjs/sitemap'],
+  modules: ['@nuxt/ui', '@nuxt/image', '@nuxtjs/sitemap'],
 
   css: ['~/assets/css/main.css'],
 

@@ -1368,7 +1368,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nuxt/kit@npm:^3.13.2, @nuxt/kit@npm:^3.19.3, @nuxt/kit@npm:^3.21.0, @nuxt/kit@npm:^3.4.0":
+"@nuxt/kit@npm:^3.13.2, @nuxt/kit@npm:^3.19.3, @nuxt/kit@npm:^3.21.0":
   version: 3.21.1
   resolution: "@nuxt/kit@npm:3.21.1"
   dependencies:
@@ -3343,13 +3343,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@trysound/sax@npm:0.2.0":
-  version: 0.2.0
-  resolution: "@trysound/sax@npm:0.2.0"
-  checksum: 10c0/44907308549ce775a41c38a815f747009ac45929a45d642b836aa6b0a536e4978d30b8d7d680bbd116e9dd73b7dbe2ef0d1369dcfc2d09e83ba381e485ecbe12
-  languageName: node
-  linkType: hard
-
 "@tybys/wasm-util@npm:^0.10.1":
   version: 0.10.1
   resolution: "@tybys/wasm-util@npm:0.10.1"
@@ -4073,7 +4066,6 @@ __metadata:
     happy-dom: "npm:^20.7.0"
     motion: "npm:^12.34.3"
     nuxt: "npm:^4.3.1"
-    nuxt-svgo: "npm:^4.2.6"
     typescript: "npm:^5.9.3"
     vite: "npm:^7.3.1"
     vitest: "npm:^4.0.18"
@@ -4550,13 +4542,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"commander@npm:^7.2.0":
-  version: 7.2.0
-  resolution: "commander@npm:7.2.0"
-  checksum: 10c0/8d690ff13b0356df7e0ebbe6c59b4712f754f4b724d4f473d3cc5b3fdcf978e3a5dc3078717858a2ceb50b0f84d0660a7f22a96cdc50fb877d0c9bb31593d23a
-  languageName: node
-  linkType: hard
-
 "commondir@npm:^1.0.1":
   version: 1.0.1
   resolution: "commondir@npm:1.0.1"
@@ -4733,16 +4718,6 @@ __metadata:
     domutils: "npm:^3.0.1"
     nth-check: "npm:^2.0.1"
   checksum: 10c0/d79fffa97106007f2802589f3ed17b8c903f1c961c0fc28aa8a051eee0cbad394d8446223862efd4c1b40445a6034f626bb639cf2035b0bfc468544177593c99
-  languageName: node
-  linkType: hard
-
-"css-tree@npm:^2.2.1":
-  version: 2.3.1
-  resolution: "css-tree@npm:2.3.1"
-  dependencies:
-    mdn-data: "npm:2.0.30"
-    source-map-js: "npm:^1.0.1"
-  checksum: 10c0/6f8c1a11d5e9b14bf02d10717fc0351b66ba12594166f65abfbd8eb8b5b490dd367f5c7721db241a3c792d935fc6751fbc09f7e1598d421477ad9fadc30f4f24
   languageName: node
   linkType: hard
 
@@ -6723,13 +6698,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mdn-data@npm:2.0.30":
-  version: 2.0.30
-  resolution: "mdn-data@npm:2.0.30"
-  checksum: 10c0/a2c472ea16cee3911ae742593715aa4c634eb3d4b9f1e6ada0902aa90df13dcbb7285d19435f3ff213ebaa3b2e0c0265c1eb0e3fb278fda7f8919f046a410cd9
-  languageName: node
-  linkType: hard
-
 "mdn-data@npm:2.12.2":
   version: 2.12.2
   resolution: "mdn-data@npm:2.12.2"
@@ -6797,15 +6765,6 @@ __metadata:
   version: 4.0.0
   resolution: "mimic-fn@npm:4.0.0"
   checksum: 10c0/de9cc32be9996fd941e512248338e43407f63f6d497abe8441fa33447d922e927de54d4cc3c1a3c6d652857acd770389d5a3823f311a744132760ce2be15ccbf
-  languageName: node
-  linkType: hard
-
-"mini-svg-data-uri@npm:^1.4.4":
-  version: 1.4.4
-  resolution: "mini-svg-data-uri@npm:1.4.4"
-  bin:
-    mini-svg-data-uri: cli.js
-  checksum: 10c0/24545fa30b5a45449241bf19c25b8bc37594b63ec06401b3d563bd1c2e8a6abb7c18741f8b354e0064baa63c291be214154bf3a66f201ae71dfab3cc1a5e3191
   languageName: node
   linkType: hard
 
@@ -7321,29 +7280,6 @@ __metadata:
     site-config-stack: "npm:3.2.21"
     ufo: "npm:^1.6.3"
   checksum: 10c0/46c2f24047f05cdad09f27c8f76273ec49772bb4b8cdbb08192de1b862017ca7dc126759730400c5edb1b52bc5cae61cbffeff96098da943ec134022c0b22b67
-  languageName: node
-  linkType: hard
-
-"nuxt-svgo@npm:^4.2.6":
-  version: 4.2.6
-  resolution: "nuxt-svgo@npm:4.2.6"
-  dependencies:
-    "@nuxt/kit": "npm:^3.4.0"
-    mini-svg-data-uri: "npm:^1.4.4"
-    svgo: "npm:3.0.2"
-  peerDependencies:
-    svgo-loader: ^4.0.0
-    vue: ">=3.2.13"
-    vue-loader: ^17.0.0
-    vue-svg-loader: 0.17.0-beta.2
-  peerDependenciesMeta:
-    svgo-loader:
-      optional: true
-    vue-loader:
-      optional: true
-    vue-svg-loader:
-      optional: true
-  checksum: 10c0/6623e6425825c10b74341fcfd993dda9edc31b740ebb823d9e3b7a796066a19460259e960758f7775dace7ea37b9d74504a709e0705c127fe321b50b2b5fb9c6
   languageName: node
   linkType: hard
 
@@ -9352,22 +9288,6 @@ __metadata:
   version: 1.0.0
   resolution: "supports-preserve-symlinks-flag@npm:1.0.0"
   checksum: 10c0/6c4032340701a9950865f7ae8ef38578d8d7053f5e10518076e6554a9381fa91bd9c6850193695c141f32b21f979c985db07265a758867bac95de05f7d8aeb39
-  languageName: node
-  linkType: hard
-
-"svgo@npm:3.0.2":
-  version: 3.0.2
-  resolution: "svgo@npm:3.0.2"
-  dependencies:
-    "@trysound/sax": "npm:0.2.0"
-    commander: "npm:^7.2.0"
-    css-select: "npm:^5.1.0"
-    css-tree: "npm:^2.2.1"
-    csso: "npm:^5.0.5"
-    picocolors: "npm:^1.0.0"
-  bin:
-    svgo: bin/svgo
-  checksum: 10c0/d682d416dd68cdcbab5e1e77b93d621325480e97dfe87777e845ea9a0ce05d03fc837ce17080af67e787f6b24430b805ff79f4591dda30a0ab4060b6a3ac2adf
   languageName: node
   linkType: hard
 
