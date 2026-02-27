@@ -2,22 +2,20 @@ import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent, h } from 'vue'
 import ExpertiseSection from '~/components/ExpertiseSection.vue'
-import { NuxtLink, SvgStub } from '../stubs'
+import { NuxtLink } from '../stubs'
 
-// Mock SVG imports
-vi.mock('~/assets/icons/icon-conception.svg', () => ({
-  default: defineComponent({ name: 'IconConception', setup: () => () => h('svg', { class: 'icon-conception' }) }),
-}))
-vi.mock('~/assets/icons/icon-gestion-projet.svg', () => ({
-  default: defineComponent({ name: 'IconGestionProjet', setup: () => () => h('svg', { class: 'icon-gestion-projet' }) }),
-}))
-vi.mock('~/assets/icons/icon-developpement.svg', () => ({
-  default: defineComponent({ name: 'IconDeveloppement', setup: () => () => h('svg', { class: 'icon-developpement' }) }),
-}))
+// Stub UIcon as a simple span with the icon name
+const UIcon = defineComponent({
+  name: 'UIcon',
+  props: { name: { type: String, default: '' }, size: { type: [String, Number], default: '' } },
+  setup(props) {
+    return () => h('span', { class: 'u-icon', 'data-icon': props.name })
+  },
+})
 
 describe('ExpertiseSection', () => {
   const wrapper = mount(ExpertiseSection, {
-    global: { components: { NuxtLink } },
+    global: { components: { NuxtLink, UIcon } },
   })
 
   it('renders without errors', () => {
@@ -59,8 +57,11 @@ describe('ExpertiseSection', () => {
     expect(wrapper.find('.expertise-grid').exists()).toBe(true)
   })
 
-  it('renders SVG icons for each card', () => {
-    const svgs = wrapper.findAll('svg')
-    expect(svgs.length).toBeGreaterThanOrEqual(3)
+  it('renders icons for each card', () => {
+    const icons = wrapper.findAll('.u-icon')
+    expect(icons.length).toBe(3)
+    expect(icons[0].attributes('data-icon')).toBe('lucide:drafting-compass')
+    expect(icons[1].attributes('data-icon')).toBe('lucide:gantt-chart')
+    expect(icons[2].attributes('data-icon')).toBe('lucide:globe')
   })
 })

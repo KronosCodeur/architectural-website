@@ -57,11 +57,11 @@ describe('Pages Structure', () => {
       expect(content).toContain(':index="3"')
     })
 
-    it('imports SVG icons', () => {
-      expect(content).toContain('icon-conception.svg')
-      expect(content).toContain('icon-gestion-projet.svg')
-      expect(content).toContain('icon-developpement.svg')
-      expect(content).toContain('icon-design-interieur.svg')
+    it('uses Lucide icons via UIcon', () => {
+      expect(content).toContain('lucide:drafting-compass')
+      expect(content).toContain('lucide:gantt-chart')
+      expect(content).toContain('lucide:globe')
+      expect(content).toContain('lucide:layers')
     })
 
     it('has page header with title "Services"', () => {

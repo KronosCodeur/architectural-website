@@ -9,9 +9,6 @@ describe('nuxt.config.ts', () => {
     expect(configContent).toContain("'@nuxt/ui'")
   })
 
-  it('registers nuxt-svgo module', () => {
-    expect(configContent).toContain("'nuxt-svgo'")
-  })
 
   it('registers @nuxt/image module', () => {
     expect(configContent).toContain("'@nuxt/image'")
