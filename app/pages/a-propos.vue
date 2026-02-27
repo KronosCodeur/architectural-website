@@ -23,9 +23,15 @@
         <div class="about-grid">
           <div class="reveal-left">
             <div style="overflow: hidden; border-radius: 2px;">
-              <img
+              <NuxtImg
                 src="/images/hero-architecture.jpg"
-                alt="Taurus Concept"
+                alt="Taurus Concept — 25 ans d'excellence architecturale depuis Lomé"
+                format="webp"
+                quality="80"
+                width="640"
+                height="480"
+                sizes="(max-width: 1024px) 100vw, 50vw"
+                loading="lazy"
                 style="width: 100%; height: auto; object-fit: cover; aspect-ratio: 4/3;"
               />
             </div>
@@ -94,7 +100,32 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: 'À Propos — Taurus Concept' })
+import { useStructuredData, breadcrumbSchema } from '~/composables/useStructuredData'
+
+const pageTitle = 'À Propos — Taurus Concept | Notre Histoire & Nos Valeurs'
+const pageDesc = 'Depuis 25 ans, Taurus Concept repousse les frontières de l\'architecture contemporaine depuis Lomé, Togo. 120+ projets dans 15 pays. Excellence, innovation, intégrité.'
+
+useHead({
+  title: pageTitle,
+  link: [{ rel: 'canonical', href: 'https://taurusconcept.com/a-propos' }],
+})
+
+useSeoMeta({
+  title: pageTitle,
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogUrl: 'https://taurusconcept.com/a-propos',
+  twitterTitle: pageTitle,
+  twitterDescription: pageDesc,
+})
+
+useStructuredData(
+  breadcrumbSchema([
+    { name: 'Accueil', url: 'https://taurusconcept.com/' },
+    { name: 'À Propos', url: 'https://taurusconcept.com/a-propos' },
+  ]),
+)
 
 const values = [
   { icon: '◆', title: 'Excellence', description: "Chaque détail compte. Nous visons la perfection dans la conception, l'exécution et la livraison de nos projets." },
