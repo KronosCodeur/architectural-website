@@ -1,2 +1,10 @@
+# Taurus Concept — Architecture & Design Premium
+# https://taurusconcept.com
+
 User-Agent: *
-Disallow:
+Allow: /
+Disallow: /_nuxt/
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://taurusconcept.com/sitemap.xml
