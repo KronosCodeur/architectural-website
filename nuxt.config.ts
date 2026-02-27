@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-const siteUrl = 'https://taurusconcept.com'
-const siteName = 'Taurus Concept'
+const siteUrl = 'https://archidesign.com'
+const siteName = 'Archi Design'
 const siteDescription = "Cabinet d'architecture premium basé à Lomé, Togo. Conception architecturale, gestion de projet et développement international. 25 ans d'excellence, 120+ projets dans 15 pays."
 
 export default defineNuxtConfig({
@@ -67,7 +67,7 @@ export default defineNuxtConfig({
         { property: 'og:image', content: `${siteUrl}/images/og-default.jpg` },
         { property: 'og:image:width', content: '1200' },
         { property: 'og:image:height', content: '630' },
-        { property: 'og:image:alt', content: "Taurus Concept — Architecture d'exception depuis Lomé" },
+        { property: 'og:image:alt', content: "Archi Design — Architecture d'exception depuis Lomé" },
 
         // ── Twitter Card
         { name: 'twitter:card', content: 'summary_large_image' },
