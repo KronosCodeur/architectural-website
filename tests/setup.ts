@@ -14,5 +14,8 @@ import { ref, reactive, computed, watch, onMounted, onUnmounted, nextTick } from
 // Stub useHead (Nuxt composable)
 ;(globalThis as any).useHead = vi.fn()
 
+// Stub useRoute (Nuxt composable)
+;(globalThis as any).useRoute = vi.fn(() => reactive({ path: '/', params: {}, query: {} }))
+
 // Stub useReveal
 ;(globalThis as any).useReveal = vi.fn(() => ({ init: vi.fn() }))
