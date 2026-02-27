@@ -1,23 +1,19 @@
 <script setup lang="ts">
-import villaImg from '~/assets/images/projet-villa-horizon.jpg'
-import tourImg from '~/assets/images/projet-tour-initiale.jpg'
-import penthouseImg from '~/assets/images/projet-penthouse-ciel.jpg'
-
 const projects = [
   {
-    image: villaImg,
+    image: '/images/projet-villa-horizon.jpg',
     title: "Villa L'Horizon",
     location: "Côte d'Azur, France",
     category: 'Résidentiel',
   },
   {
-    image: tourImg,
+    image: '/images/projet-tour-initiale.jpg',
     title: 'Tour Initiale',
     location: 'Genève, Suisse',
     category: 'Commercial',
   },
   {
-    image: penthouseImg,
+    image: '/images/projet-penthouse-ciel.jpg',
     title: 'Penthouse Ciel',
     location: 'Dubaï, EAU',
     category: 'Résidentiel',
@@ -51,9 +47,15 @@ const projects = [
           class="project-card"
           style="height: 480px; text-decoration: none; display: block;"
         >
-          <img
+          <NuxtImg
             :src="project.image"
-            :alt="project.title"
+            :alt="`${project.title} — ${project.location} | Taurus Concept`"
+            format="webp"
+            quality="80"
+            width="600"
+            height="480"
+            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            loading="lazy"
             style="width: 100%; height: 100%; object-fit: cover;"
           />
 
