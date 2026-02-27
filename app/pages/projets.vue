@@ -25,9 +25,15 @@
             class="project-card"
             style="height: 480px; text-decoration: none; display: block;"
           >
-            <img
+            <NuxtImg
               :src="project.image"
-              :alt="project.title"
+              :alt="`${project.title} — ${project.location} | Taurus Concept`"
+              format="webp"
+              quality="80"
+              width="600"
+              height="480"
+              sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+              loading="lazy"
               style="width: 100%; height: 100%; object-fit: cover;"
             />
             <div style="position: absolute; inset: 0; background: linear-gradient(to top, rgba(0,0,0,0.6) 0%, transparent 50%);" />
@@ -71,7 +77,32 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: 'Projets — Taurus Concept' })
+import { useStructuredData, breadcrumbSchema } from '~/composables/useStructuredData'
+
+const pageTitle = 'Projets — Taurus Concept | Réalisations Architecturales'
+const pageDesc = 'Découvrez nos réalisations architecturales emblématiques : villas, tours, penthouses. Plus de 120 projets livrés dans 15 pays, du Togo à l\'international.'
+
+useHead({
+  title: pageTitle,
+  link: [{ rel: 'canonical', href: 'https://taurusconcept.com/projets' }],
+})
+
+useSeoMeta({
+  title: pageTitle,
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogUrl: 'https://taurusconcept.com/projets',
+  twitterTitle: pageTitle,
+  twitterDescription: pageDesc,
+})
+
+useStructuredData(
+  breadcrumbSchema([
+    { name: 'Accueil', url: 'https://taurusconcept.com/' },
+    { name: 'Projets', url: 'https://taurusconcept.com/projets' },
+  ]),
+)
 
 const projects = [
   { image: '/images/projet-villa-horizon.jpg', title: "Villa L'Horizon", location: "Côte d'Azur, France", category: 'Résidentiel' },
