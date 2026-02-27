@@ -120,7 +120,33 @@
 </template>
 
 <script setup lang="ts">
-useHead({ title: 'Contact — Taurus Concept' })
+import { useStructuredData, localBusinessSchema, breadcrumbSchema } from '~/composables/useStructuredData'
+
+const pageTitle = 'Contact — Taurus Concept | Parlons de Votre Projet'
+const pageDesc = 'Contactez Taurus Concept pour discuter de votre projet architectural. Siège à Lomé, bureaux à Accra, Paris et Dubaï. Consultation personnalisée.'
+
+useHead({
+  title: pageTitle,
+  link: [{ rel: 'canonical', href: 'https://taurusconcept.com/contact' }],
+})
+
+useSeoMeta({
+  title: pageTitle,
+  description: pageDesc,
+  ogTitle: pageTitle,
+  ogDescription: pageDesc,
+  ogUrl: 'https://taurusconcept.com/contact',
+  twitterTitle: pageTitle,
+  twitterDescription: pageDesc,
+})
+
+useStructuredData([
+  localBusinessSchema,
+  breadcrumbSchema([
+    { name: 'Accueil', url: 'https://taurusconcept.com/' },
+    { name: 'Contact', url: 'https://taurusconcept.com/contact' },
+  ]),
+])
 
 const { init } = useReveal()
 
