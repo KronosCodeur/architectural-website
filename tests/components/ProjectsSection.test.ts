@@ -1,16 +1,11 @@
-import { describe, it, expect, vi } from 'vitest'
+import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import ProjectsSection from '~/components/ProjectsSection.vue'
-import { NuxtLink } from '../stubs'
-
-// Mock image imports
-vi.mock('~/assets/images/projet-villa-horizon.jpg', () => ({ default: '/images/projet-villa-horizon.jpg' }))
-vi.mock('~/assets/images/projet-tour-initiale.jpg', () => ({ default: '/images/projet-tour-initiale.jpg' }))
-vi.mock('~/assets/images/projet-penthouse-ciel.jpg', () => ({ default: '/images/projet-penthouse-ciel.jpg' }))
+import { NuxtLink, NuxtImg } from '../stubs'
 
 describe('ProjectsSection', () => {
   const wrapper = mount(ProjectsSection, {
-    global: { components: { NuxtLink } },
+    global: { components: { NuxtLink, NuxtImg } },
   })
 
   it('renders without errors', () => {
