@@ -292,7 +292,9 @@ describe('SEO — Image Optimization', () => {
     })
 
     it(`${name} sets quality="80"`, () => {
-      expect(content).toContain('quality="80"')
+      const hasStaticQuality = content.includes('quality="80"')
+      const hasBoundQuality = content.includes(':quality="80"')
+      expect(hasStaticQuality || hasBoundQuality).toBe(true)
     })
 
     it(`${name} includes descriptive alt text`, () => {
@@ -318,8 +320,10 @@ describe('SEO — Image Optimization', () => {
       expect(content).toContain('height="')
     })
 
-    it(`${name} includes sizes attribute for responsive images`, () => {
-      expect(content).toContain('sizes="')
+    it(`${name} includes densities or sizes attribute for responsive images`, () => {
+      const hasDensities = content.includes('densities="')
+      const hasSizes = content.includes('sizes="')
+      expect(hasDensities || hasSizes).toBe(true)
     })
   })
 

@@ -27,10 +27,10 @@
                 src="/images/hero-architecture.jpg"
                 alt="Taurus Concept — 25 ans d'excellence architecturale depuis Lomé"
                 format="webp"
-                quality="80"
+                :quality="80"
                 width="640"
                 height="480"
-                sizes="(max-width: 1024px) 100vw, 50vw"
+                densities="x1 x2"
                 loading="lazy"
                 style="width: 100%; height: auto; object-fit: cover; aspect-ratio: 4/3;"
               />

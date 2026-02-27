@@ -5,7 +5,13 @@ const siteDescription = "Cabinet d'architecture premium basé à Lomé, Togo. Co
 
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
+  devtools: {
+    enabled: true,
+
+    timeline: {
+      enabled: true,
+    },
+  },
   modules: ['@nuxt/ui', 'nuxt-svgo', '@nuxt/image', '@nuxtjs/sitemap'],
 
   css: ['~/assets/css/main.css'],

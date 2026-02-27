@@ -51,10 +51,10 @@ const projects = [
             :src="project.image"
             :alt="`${project.title} — ${project.location} | Taurus Concept`"
             format="webp"
-            quality="80"
+            :quality="80"
             width="600"
             height="480"
-            sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+            densities="x1 x2"
             loading="lazy"
             style="width: 100%; height: 100%; object-fit: cover;"
           />
