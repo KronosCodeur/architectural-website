@@ -48,3 +48,22 @@ export const SvgStub = defineComponent({
     return () => h('svg', { class: 'svg-stub' })
   },
 })
+
+// Stub NuxtImg as a simple <img> tag
+export const NuxtImg = defineComponent({
+  name: 'NuxtImg',
+  props: {
+    src: { type: String, default: '' },
+    alt: { type: String, default: '' },
+    format: { type: String, default: '' },
+    quality: { type: [String, Number], default: '' },
+    width: { type: [String, Number], default: '' },
+    height: { type: [String, Number], default: '' },
+    sizes: { type: String, default: '' },
+    loading: { type: String, default: '' },
+    fetchpriority: { type: String, default: '' },
+  },
+  setup(props) {
+    return () => h('img', { src: props.src, alt: props.alt, loading: props.loading || 'lazy' })
+  },
+})
