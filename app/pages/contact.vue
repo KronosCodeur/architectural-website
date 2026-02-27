@@ -55,7 +55,7 @@
                 Email
               </h3>
               <p style="font-size: 16px; color: var(--gray-text); line-height: 1.7;">
-                contact@taurusconcept.com
+                contact@archidesign.com
               </p>
             </div>
 
@@ -122,12 +122,12 @@
 <script setup lang="ts">
 import { useStructuredData, localBusinessSchema, breadcrumbSchema } from '~/composables/useStructuredData'
 
-const pageTitle = 'Contact — Taurus Concept | Parlons de Votre Projet'
-const pageDesc = 'Contactez Taurus Concept pour discuter de votre projet architectural. Siège à Lomé, bureaux à Accra, Paris et Dubaï. Consultation personnalisée.'
+const pageTitle = 'Contact — Archi Design | Parlons de Votre Projet'
+const pageDesc = 'Contactez Archi Design pour discuter de votre projet architectural. Siège à Lomé, bureaux à Accra, Paris et Dubaï. Consultation personnalisée.'
 
 useHead({
   title: pageTitle,
-  link: [{ rel: 'canonical', href: 'https://taurusconcept.com/contact' }],
+  link: [{ rel: 'canonical', href: 'https://archidesign.com/contact' }],
 })
 
 useSeoMeta({
@@ -135,7 +135,7 @@ useSeoMeta({
   description: pageDesc,
   ogTitle: pageTitle,
   ogDescription: pageDesc,
-  ogUrl: 'https://taurusconcept.com/contact',
+  ogUrl: 'https://archidesign.com/contact',
   twitterTitle: pageTitle,
   twitterDescription: pageDesc,
 })
@@ -143,8 +143,8 @@ useSeoMeta({
 useStructuredData([
   localBusinessSchema,
   breadcrumbSchema([
-    { name: 'Accueil', url: 'https://taurusconcept.com/' },
-    { name: 'Contact', url: 'https://taurusconcept.com/contact' },
+    { name: 'Accueil', url: 'https://archidesign.com/' },
+    { name: 'Contact', url: 'https://archidesign.com/contact' },
   ]),
 ])
 
