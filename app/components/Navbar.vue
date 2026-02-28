@@ -111,6 +111,7 @@ const navLinks = [
 
 onMounted(() => {
   const onScroll = () => { scrolled.value = window.scrollY > 20 }
+  onScroll()
   window.addEventListener('scroll', onScroll, { passive: true })
 })
 </script>
