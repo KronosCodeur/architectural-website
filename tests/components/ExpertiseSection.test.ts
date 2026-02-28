@@ -1,8 +1,8 @@
 import { describe, it, expect } from 'vitest'
 import { mount } from '@vue/test-utils'
 import { defineComponent, h } from 'vue'
-import ExpertiseSection from '~/components/ExpertiseSection.vue'
 import { NuxtLink } from '../stubs'
+import ExpertiseSection from "../../app/components/ExpertiseSection.vue";
 
 // Stub UIcon as a simple span with the icon name
 const UIcon = defineComponent({
