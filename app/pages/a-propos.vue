@@ -11,7 +11,7 @@
         </h1>
         <div class="reveal" style="width: 56px; height: 2px; background-color: var(--vert); margin: 0 auto 24px;" />
         <p class="reveal" style="font-size: 18px; color: #BDBDBD; max-width: 640px; margin: 0 auto; line-height: 1.7;">
-          Depuis le Togo, Taurus Concept repousse les frontières de l'architecture
+          Depuis le Togo, Archi Design repousse les frontières de l'architecture
           contemporaine avec une vision internationale.
         </p>
       </div>
@@ -25,7 +25,7 @@
             <div style="overflow: hidden; border-radius: 2px;">
               <NuxtImg
                 src="/images/hero-architecture.jpg"
-                alt="Taurus Concept — 25 ans d'excellence architecturale depuis Lomé"
+                alt="Archi Design — 25 ans d'excellence architecturale depuis Lomé"
                 format="webp"
                 :quality="80"
                 width="640"
@@ -46,7 +46,7 @@
             </h2>
             <div style="width: 56px; height: 2px; background-color: var(--vert); margin-bottom: 24px;" />
             <p style="font-size: 16px; color: var(--gray-text); line-height: 1.75; margin-bottom: 16px;">
-              Fondé à Lomé, Taurus Concept est né de la conviction qu'une architecture
+              Fondé à Lomé, Archi Design est né de la conviction qu'une architecture
               d'exception peut émerger de n'importe quel coin du monde. Depuis plus de 25 ans,
               nous concevons des espaces qui allient élégance contemporaine et respect
               des identités locales.
@@ -102,12 +102,12 @@
 <script setup lang="ts">
 import { useStructuredData, breadcrumbSchema } from '~/composables/useStructuredData'
 
-const pageTitle = 'À Propos — Taurus Concept | Notre Histoire & Nos Valeurs'
-const pageDesc = 'Depuis 25 ans, Taurus Concept repousse les frontières de l\'architecture contemporaine depuis Lomé, Togo. 120+ projets dans 15 pays. Excellence, innovation, intégrité.'
+const pageTitle = 'À Propos — Archi Design | Notre Histoire & Nos Valeurs'
+const pageDesc = 'Depuis 25 ans, Archi Design repousse les frontières de l\'architecture contemporaine depuis Lomé, Togo. 120+ projets dans 15 pays. Excellence, innovation, intégrité.'
 
 useHead({
   title: pageTitle,
-  link: [{ rel: 'canonical', href: 'https://taurusconcept.com/a-propos' }],
+  link: [{ rel: 'canonical', href: 'https://archidesign.com/a-propos' }],
 })
 
 useSeoMeta({
@@ -115,15 +115,15 @@ useSeoMeta({
   description: pageDesc,
   ogTitle: pageTitle,
   ogDescription: pageDesc,
-  ogUrl: 'https://taurusconcept.com/a-propos',
+  ogUrl: 'https://archidesign.com/a-propos',
   twitterTitle: pageTitle,
   twitterDescription: pageDesc,
 })
 
 useStructuredData(
   breadcrumbSchema([
-    { name: 'Accueil', url: 'https://taurusconcept.com/' },
-    { name: 'À Propos', url: 'https://taurusconcept.com/a-propos' },
+    { name: 'Accueil', url: 'https://archidesign.com/' },
+    { name: 'À Propos', url: 'https://archidesign.com/a-propos' },
   ]),
 )
 

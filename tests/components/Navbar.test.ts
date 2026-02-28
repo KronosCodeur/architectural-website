@@ -22,18 +22,18 @@ describe('Navbar', () => {
     expect(wrapper.exists()).toBe(true)
   })
 
-  it('displays brand name "Taurus Concept"', () => {
+  it('displays brand name "Archi Design"', () => {
     const wrapper = mount(Navbar, {
       global: { components: globalStubs },
     })
-    expect(wrapper.text()).toContain('Taurus Concept')
+    expect(wrapper.text()).toContain('Archi Design')
   })
 
-  it('displays TC logo text', () => {
+  it('displays AD logo text', () => {
     const wrapper = mount(Navbar, {
       global: { components: globalStubs },
     })
-    expect(wrapper.text()).toContain('TC')
+    expect(wrapper.text()).toContain('AD')
   })
 
   it('renders all 5 navigation links', () => {
@@ -75,7 +75,7 @@ describe('Navbar', () => {
     const wrapper = mount(Navbar, {
       global: { components: globalStubs },
     })
-    expect(wrapper.text()).toContain('contact@taurusconcept.com')
+    expect(wrapper.text()).toContain('contact@archidesign.com')
   })
 
   it('has a mobile burger button', () => {

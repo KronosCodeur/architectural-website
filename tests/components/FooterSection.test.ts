@@ -12,12 +12,12 @@ describe('FooterSection', () => {
     expect(wrapper.exists()).toBe(true)
   })
 
-  it('displays brand name "Taurus Concept"', () => {
-    expect(wrapper.text()).toContain('Taurus Concept')
+  it('displays brand name "Archi Design"', () => {
+    expect(wrapper.text()).toContain('Archi Design')
   })
 
-  it('displays TC logo', () => {
-    expect(wrapper.text()).toContain('TC')
+  it('displays AD logo', () => {
+    expect(wrapper.text()).toContain('AD')
   })
 
   it('displays brand tagline', () => {
@@ -56,7 +56,7 @@ describe('FooterSection', () => {
   })
 
   it('displays contact email', () => {
-    expect(wrapper.text()).toContain('contact@taurusconcept.com')
+    expect(wrapper.text()).toContain('contact@archidesign.com')
   })
 
   it('displays phone number', () => {
@@ -66,7 +66,7 @@ describe('FooterSection', () => {
   it('displays copyright notice with current year', () => {
     const year = new Date().getFullYear().toString()
     expect(wrapper.text()).toContain(year)
-    expect(wrapper.text()).toContain('Taurus Concept. Tous droits réservés')
+    expect(wrapper.text()).toContain('Archi Design. Tous droits réservés')
   })
 
   it('displays legal text placeholders', () => {

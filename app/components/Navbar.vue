@@ -4,7 +4,7 @@
     <div class="top-bar" style="background-color: var(--anthracite); color: rgba(255,255,255,0.5); font-size: 12px; padding: 8px 0;">
       <div class="container-brand" style="display: flex; justify-content: space-between; align-items: center;">
         <span>Lomé &bull; Accra &bull; Paris &bull; Dubaï</span>
-        <span>contact@taurusconcept.com</span>
+        <span>contact@archidesign.com</span>
       </div>
     </div>
 
@@ -22,11 +22,21 @@
       <div class="container-brand" style="display: flex; align-items: center; justify-content: space-between; height: 80px;">
         <!-- Logo -->
         <NuxtLink to="/" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
-          <div style="width: 36px; height: 36px; border: 2px solid var(--vert); display: flex; align-items: center; justify-content: center;">
-            <span style="font-size: 12px; font-weight: 700; color: var(--vert);">TC</span>
+          <div
+            :style="{
+              width: '36px', height: '36px',
+              border: `2px solid ${darkBg ? '#fff' : 'var(--vert)'}`,
+              display: 'flex', alignItems: 'center', justifyContent: 'center',
+              transition: 'border-color 0.5s ease'
+            }"
+          >
+            <span :style="{ fontSize: '12px', fontWeight: 700, color: darkBg ? '#fff' : 'var(--vert)', transition: 'color 0.5s ease' }">AD</span>
           </div>
-          <span class="font-heading" style="font-size: 18px; font-weight: 600; color: var(--anthracite); letter-spacing: -0.02em;">
-            Taurus Concept
+          <span
+            class="font-heading"
+            :style="{ fontSize: '18px', fontWeight: 600, letterSpacing: '-0.02em', color: darkBg ? '#fff' : 'var(--vert)', transition: 'color 0.5s ease' }"
+          >
+            Archi Design
           </span>
         </NuxtLink>
 
@@ -37,7 +47,7 @@
             :key="link.label"
             :to="link.to"
             class="nav-link"
-            :class="{ 'nav-link--cta': link.label === 'Contact' }"
+            :class="{ 'nav-link--cta': link.label === 'Contact', 'nav-link--light': darkBg }"
           >
             {{ link.label }}
           </NuxtLink>
@@ -46,7 +56,7 @@
         <!-- Mobile burger -->
         <button
           class="mobile-burger"
-          style="color: var(--anthracite); padding: 8px; background: none; border: none; cursor: pointer;"
+          :style="{ color: darkBg ? '#fff' : 'var(--anthracite)', padding: '8px', background: 'none', border: 'none', cursor: 'pointer', transition: 'color 0.5s ease' }"
           aria-label="Menu"
           @click="mobileOpen = !mobileOpen"
         >
@@ -84,8 +94,12 @@
 </template>
 
 <script setup lang="ts">
+const route = useRoute()
 const mobileOpen = ref(false)
 const scrolled = ref(false)
+
+const isHome = computed(() => route.path === '/')
+const darkBg = computed(() => !isHome.value && !scrolled.value)
 
 const navLinks = [
   { label: 'Accueil', to: '/' },
@@ -97,6 +111,7 @@ const navLinks = [
 
 onMounted(() => {
   const onScroll = () => { scrolled.value = window.scrollY > 20 }
+  onScroll()
   window.addEventListener('scroll', onScroll, { passive: true })
 })
 </script>

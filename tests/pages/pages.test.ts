@@ -34,7 +34,7 @@ describe('Pages Structure', () => {
 
     it('sets page title', () => {
       expect(content).toContain('useHead')
-      expect(content).toContain('Taurus Concept')
+      expect(content).toContain('Archi Design')
     })
 
     it('initializes reveal animations', () => {
@@ -57,11 +57,11 @@ describe('Pages Structure', () => {
       expect(content).toContain(':index="3"')
     })
 
-    it('imports SVG icons', () => {
-      expect(content).toContain('icon-conception.svg')
-      expect(content).toContain('icon-gestion-projet.svg')
-      expect(content).toContain('icon-developpement.svg')
-      expect(content).toContain('icon-design-interieur.svg')
+    it('uses Lucide icons via UIcon', () => {
+      expect(content).toContain('lucide:drafting-compass')
+      expect(content).toContain('lucide:gantt-chart')
+      expect(content).toContain('lucide:globe')
+      expect(content).toContain('lucide:layers')
     })
 
     it('has page header with title "Services"', () => {
@@ -73,7 +73,7 @@ describe('Pages Structure', () => {
     })
 
     it('sets page title', () => {
-      expect(content).toContain('Services — Taurus Concept')
+      expect(content).toContain('Services — Archi Design')
     })
   })
 
@@ -100,7 +100,7 @@ describe('Pages Structure', () => {
     })
 
     it('sets page title', () => {
-      expect(content).toContain('Projets — Taurus Concept')
+      expect(content).toContain('Projets — Archi Design')
     })
   })
 
@@ -132,7 +132,7 @@ describe('Pages Structure', () => {
     })
 
     it('sets page title', () => {
-      expect(content).toContain('À Propos — Taurus Concept')
+      expect(content).toContain('À Propos — Archi Design')
     })
   })
 
@@ -183,7 +183,7 @@ describe('Pages Structure', () => {
     })
 
     it('sets page title', () => {
-      expect(content).toContain('Contact — Taurus Concept')
+      expect(content).toContain('Contact — Archi Design')
     })
   })
 })

@@ -9,9 +9,6 @@ describe('nuxt.config.ts', () => {
     expect(configContent).toContain("'@nuxt/ui'")
   })
 
-  it('registers nuxt-svgo module', () => {
-    expect(configContent).toContain("'nuxt-svgo'")
-  })
 
   it('registers @nuxt/image module', () => {
     expect(configContent).toContain("'@nuxt/image'")
@@ -35,7 +32,7 @@ describe('nuxt.config.ts', () => {
   })
 
   it('sets default page title', () => {
-    expect(configContent).toContain('Taurus Concept')
+    expect(configContent).toContain('Archi Design')
   })
 
   it('sets meta description', () => {
@@ -74,6 +71,6 @@ describe('nuxt.config.ts', () => {
 
   it('configures sitemap', () => {
     expect(configContent).toContain('sitemap:')
-    expect(configContent).toContain('taurusconcept.com')
+    expect(configContent).toContain('archidesign.com')
   })
 })

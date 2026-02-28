@@ -29,7 +29,7 @@
       :index="0"
     >
       <template #icon>
-        <SvgConception style="width: 48px; height: 48px;" />
+        <UIcon name="lucide:drafting-compass" size="48" style="color: var(--vert);" />
       </template>
     </ServiceBlock>
 
@@ -45,7 +45,7 @@
       reversed
     >
       <template #icon>
-        <SvgGestionProjet style="width: 48px; height: 48px;" />
+        <UIcon name="lucide:gantt-chart" size="48" style="color: var(--vert);" />
       </template>
     </ServiceBlock>
 
@@ -60,7 +60,7 @@
       :index="2"
     >
       <template #icon>
-        <SvgDeveloppement style="width: 48px; height: 48px;" />
+        <UIcon name="lucide:globe" size="48" style="color: var(--vert);" />
       </template>
     </ServiceBlock>
 
@@ -76,7 +76,7 @@
       reversed
     >
       <template #icon>
-        <SvgDesignInterieur style="width: 48px; height: 48px;" />
+        <UIcon name="lucide:layers" size="48" style="color: var(--vert);" />
       </template>
     </ServiceBlock>
 
@@ -102,19 +102,15 @@
 </template>
 
 <script setup lang="ts">
-import SvgConception from '~/assets/icons/icon-conception.svg'
-import SvgGestionProjet from '~/assets/icons/icon-gestion-projet.svg'
-import SvgDeveloppement from '~/assets/icons/icon-developpement.svg'
-import SvgDesignInterieur from '~/assets/icons/icon-design-interieur.svg'
 
 import { useStructuredData, breadcrumbSchema } from '~/composables/useStructuredData'
 
-const pageTitle = 'Services — Taurus Concept | Architecture & Design'
+const pageTitle = 'Services — Archi Design | Architecture & Design'
 const pageDesc = "Découvrez nos services : conception architecturale, gestion de projet, développement international et design d'intérieur. Expertise premium depuis Lomé, Togo."
 
 useHead({
   title: pageTitle,
-  link: [{ rel: 'canonical', href: 'https://taurusconcept.com/services' }],
+  link: [{ rel: 'canonical', href: 'https://archidesign.com/services' }],
 })
 
 useSeoMeta({
@@ -122,21 +118,21 @@ useSeoMeta({
   description: pageDesc,
   ogTitle: pageTitle,
   ogDescription: pageDesc,
-  ogUrl: 'https://taurusconcept.com/services',
+  ogUrl: 'https://archidesign.com/services',
   twitterTitle: pageTitle,
   twitterDescription: pageDesc,
 })
 
 useStructuredData([
   breadcrumbSchema([
-    { name: 'Accueil', url: 'https://taurusconcept.com/' },
-    { name: 'Services', url: 'https://taurusconcept.com/services' },
+    { name: 'Accueil', url: 'https://archidesign.com/' },
+    { name: 'Services', url: 'https://archidesign.com/services' },
   ]),
   {
     '@context': 'https://schema.org',
     '@type': 'Service',
     'serviceType': 'Architectural Services',
-    'provider': { '@type': 'Organization', 'name': 'Taurus Concept', 'url': 'https://taurusconcept.com' },
+    'provider': { '@type': 'Organization', 'name': 'Archi Design', 'url': 'https://archidesign.com' },
     'areaServed': ['Togo', 'Ghana', 'France', 'United Arab Emirates'],
     'hasOfferCatalog': {
       '@type': 'OfferCatalog',

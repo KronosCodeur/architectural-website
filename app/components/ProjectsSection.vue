@@ -49,7 +49,7 @@ const projects = [
         >
           <NuxtImg
             :src="project.image"
-            :alt="`${project.title} — ${project.location} | Taurus Concept`"
+            :alt="`${project.title} — ${project.location} | Archi Design`"
             format="webp"
             :quality="80"
             width="600"

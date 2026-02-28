@@ -15,7 +15,7 @@
           <div style="overflow: hidden; border-radius: 2px;">
             <NuxtImg
               :src="image"
-              :alt="`${title} — Service architecture Taurus Concept`"
+              :alt="`${title} — Service architecture Archi Design`"
               format="webp"
               :quality="80"
               width="640"

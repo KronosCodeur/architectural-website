@@ -10,12 +10,12 @@
 <script setup lang="ts">
 import { useStructuredData, localBusinessSchema } from '~/composables/useStructuredData'
 
-const pageTitle = "Taurus Concept — Architecture d'Exception à Lomé"
+const pageTitle = "Archi Design — Architecture d'Exception à Lomé"
 const pageDesc = "Cabinet d'architecture premium basé à Lomé, Togo. Conception architecturale sur-mesure, gestion de projet et développement immobilier international. 25 ans d'excellence."
 
 useHead({
   title: pageTitle,
-  link: [{ rel: 'canonical', href: 'https://taurusconcept.com/' }],
+  link: [{ rel: 'canonical', href: 'https://archidesign.com/' }],
 })
 
 useSeoMeta({
@@ -23,7 +23,7 @@ useSeoMeta({
   description: pageDesc,
   ogTitle: pageTitle,
   ogDescription: pageDesc,
-  ogUrl: 'https://taurusconcept.com/',
+  ogUrl: 'https://archidesign.com/',
   ogType: 'website',
   twitterTitle: pageTitle,
   twitterDescription: pageDesc,

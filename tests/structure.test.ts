@@ -55,19 +55,6 @@ describe('Project Structure', () => {
     })
   })
 
-  describe('SVG Icons', () => {
-    const icons = [
-      'icon-conception.svg',
-      'icon-design-interieur.svg',
-      'icon-developpement.svg',
-      'icon-gestion-projet.svg',
-    ]
-    icons.forEach(icon => {
-      it(`${icon} exists`, () => {
-        expect(existsSync(resolve(root, 'app/assets/icons', icon))).toBe(true)
-      })
-    })
-  })
 
   describe('Asset Images', () => {
     const images = [

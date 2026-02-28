@@ -105,7 +105,7 @@ describe('SEO — Structured Data (schema.org)', () => {
 
   it('defines Organization schema', () => {
     expect(structuredData).toContain("'@type': 'Organization'")
-    expect(structuredData).toContain("'Taurus Concept'")
+    expect(structuredData).toContain("'Archi Design'")
   })
 
   it('defines ArchitectureFirm (LocalBusiness) schema', () => {
@@ -125,7 +125,7 @@ describe('SEO — Structured Data (schema.org)', () => {
 
   it('includes contact information', () => {
     expect(structuredData).toContain('+228-90-00-00-00')
-    expect(structuredData).toContain('contact@taurusconcept.com')
+    expect(structuredData).toContain('contact@archidesign.com')
   })
 
   it('defines WebSite schema', () => {
@@ -213,7 +213,7 @@ describe('SEO — Sitemap & Robots', () => {
   })
 
   it('robots.txt includes sitemap URL', () => {
-    expect(robotsTxt).toContain('Sitemap: https://taurusconcept.com/sitemap.xml')
+    expect(robotsTxt).toContain('Sitemap: https://archidesign.com/sitemap.xml')
   })
 
   it('nuxt.config registers @nuxtjs/sitemap module', () => {
@@ -223,7 +223,7 @@ describe('SEO — Sitemap & Robots', () => {
 
   it('nuxt.config sets site URL for sitemap', () => {
     const config = readFile('nuxt.config.ts')
-    expect(config).toContain('taurusconcept.com')
+    expect(config).toContain('archidesign.com')
   })
 })
 

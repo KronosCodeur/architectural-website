@@ -27,7 +27,7 @@
           >
             <NuxtImg
               :src="project.image"
-              :alt="`${project.title} — ${project.location} | Taurus Concept`"
+              :alt="`${project.title} — ${project.location} | Archi Design`"
               format="webp"
               :quality="80"
               width="600"
@@ -79,12 +79,12 @@
 <script setup lang="ts">
 import { useStructuredData, breadcrumbSchema } from '~/composables/useStructuredData'
 
-const pageTitle = 'Projets — Taurus Concept | Réalisations Architecturales'
+const pageTitle = 'Projets — Archi Design | Réalisations Architecturales'
 const pageDesc = 'Découvrez nos réalisations architecturales emblématiques : villas, tours, penthouses. Plus de 120 projets livrés dans 15 pays, du Togo à l\'international.'
 
 useHead({
   title: pageTitle,
-  link: [{ rel: 'canonical', href: 'https://taurusconcept.com/projets' }],
+  link: [{ rel: 'canonical', href: 'https://archidesign.com/projets' }],
 })
 
 useSeoMeta({
@@ -92,15 +92,15 @@ useSeoMeta({
   description: pageDesc,
   ogTitle: pageTitle,
   ogDescription: pageDesc,
-  ogUrl: 'https://taurusconcept.com/projets',
+  ogUrl: 'https://archidesign.com/projets',
   twitterTitle: pageTitle,
   twitterDescription: pageDesc,
 })
 
 useStructuredData(
   breadcrumbSchema([
-    { name: 'Accueil', url: 'https://taurusconcept.com/' },
-    { name: 'Projets', url: 'https://taurusconcept.com/projets' },
+    { name: 'Accueil', url: 'https://archidesign.com/' },
+    { name: 'Projets', url: 'https://archidesign.com/projets' },
   ]),
 )
 

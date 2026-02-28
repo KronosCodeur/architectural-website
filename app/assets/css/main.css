@@ -306,6 +306,12 @@ img {
 .nav-link:hover::after {
   width: 100%;
 }
+.nav-link--light {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+.nav-link--light:hover {
+  color: #fff !important;
+}
 
 /* ── Card hover ── */
 .card-expertise {
