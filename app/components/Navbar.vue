@@ -45,7 +45,7 @@
           <NuxtLink
             v-for="link in navLinks"
             :key="link.label"
-            :to="link.to"
+            :to="link.url"
             class="nav-link"
             :class="{ 'nav-link--cta': link.label === 'Contact', 'nav-link--light': darkBg }"
           >
@@ -73,7 +73,7 @@
           <NuxtLink
             v-for="link in navLinks"
             :key="link.label"
-            :to="link.to"
+            :to="link.url"
             style="display: block; padding: 14px 0; font-size: 14px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--gray-text); border-bottom: 1px solid rgba(214,198,184,0.2); text-decoration: none;"
             @click="mobileOpen = false"
           >
@@ -101,13 +101,18 @@ const scrolled = ref(false)
 const isHome = computed(() => route.path === '/')
 const darkBg = computed(() => !isHome.value && !scrolled.value)
 
-const navLinks = [
-  { label: 'Accueil', to: '/' },
-  { label: 'Services', to: '/services' },
-  { label: 'Projets', to: '/projets' },
-  { label: 'À propos', to: '/a-propos' },
-  { label: 'Contact', to: '/contact' },
+const FALLBACK_LINKS = [
+  { label: 'Accueil', url: '/' },
+  { label: 'Services', url: '/services' },
+  { label: 'Projets', url: '/projets' },
+  { label: 'À propos', url: '/a-propos' },
+  { label: 'Contact', url: '/contact' },
 ]
+
+const { data: cmsNav } = await useFetch('/api/navigation', { key: 'nav', default: () => [] })
+const navLinks = computed(() =>
+  cmsNav.value?.length ? cmsNav.value : FALLBACK_LINKS
+)
 
 onMounted(() => {
   const onScroll = () => { scrolled.value = window.scrollY > 20 }
