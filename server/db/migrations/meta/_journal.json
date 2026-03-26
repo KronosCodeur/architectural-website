@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1774468809150,
+      "tag": "0000_gifted_shotgun",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1774472633218,
+      "tag": "0001_mean_nick_fury",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1774483245529,
+      "tag": "0002_serious_anthem",
+      "breakpoints": true
+    }
+  ]
+}
