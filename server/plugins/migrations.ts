@@ -8,6 +8,14 @@ export default defineNitroPlugin(() => {
   sqlite.pragma('journal_mode = WAL')
   sqlite.pragma('foreign_keys = ON')
 
+  const columns = (
+    sqlite.prepare('PRAGMA table_info(__drizzle_migrations)').all() as { name: string }[]
+  ).map((c) => c.name)
+
+  if (columns.length > 0 && !columns.includes('name')) {
+    sqlite.exec('DROP TABLE __drizzle_migrations')
+  }
+
   sqlite.exec(`
     CREATE TABLE IF NOT EXISTS __drizzle_migrations (
       id INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -38,9 +46,14 @@ export default defineNitroPlugin(() => {
 
     const runMigration = sqlite.transaction(() => {
       for (const stmt of statements) {
-        sqlite.exec(stmt)
+        try {
+          sqlite.exec(stmt)
+        } catch (e: unknown) {
+          const msg = (e as Error).message ?? ''
+          if (!msg.includes('already exists') && !msg.includes('duplicate column name')) throw e
+        }
       }
-      sqlite.prepare('INSERT INTO __drizzle_migrations (name) VALUES (?)').run(file)
+      sqlite.prepare('INSERT OR IGNORE INTO __drizzle_migrations (name) VALUES (?)').run(file)
     })
 
     runMigration()
