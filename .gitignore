@@ -23,3 +23,12 @@ logs
 .env.*
 !.env.example
 .yarn/
+
+# Base de données locale
+*.sqlite
+*.sqlite-wal
+*.sqlite-shm
+
+# Médias uploadés
+public/uploads/*
+!public/uploads/.gitkeep
