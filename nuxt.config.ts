@@ -1,5 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
-const siteUrl = process.env.NUXT_PUBLIC_SITE_URL ?? 'https://archidesign.kronoscodeur.com'
+const siteUrl = process.env.NUXT_PUBLIC_SITE_URL ?? 'https://velacms.kronoscodeur.com'
 const siteName = 'Archi Design'
 const siteDescription = "Cabinet d'architecture premium basé à Lomé, Togo. Conception architecturale, gestion de projet et développement international. 25 ans d'excellence, 120+ projets dans 15 pays."
 
