@@ -12,9 +12,22 @@ export default defineNuxtConfig({
       enabled: true,
     },
   },
-  modules: ['@nuxt/ui', '@nuxt/image', '@nuxtjs/sitemap'],
+  modules: ['@nuxt/ui', '@nuxt/image', '@nuxtjs/sitemap', 'nuxt-auth-utils'],
+
+  components: [
+    { path: '~/components/blocks', pathPrefix: false },
+    { path: '~/components/admin', prefix: 'Admin', pathPrefix: false },
+    { path: '~/components/templates', pathPrefix: false },
+    { path: '~/components' },
+  ],
 
   css: ['~/assets/css/main.css'],
+
+  // ── Runtime Config ───────────────────────────────────────
+  runtimeConfig: {
+    sessionPassword: process.env.NUXT_SESSION_PASSWORD ?? '',
+    databasePath: process.env.DATABASE_PATH ?? './server/db/database.sqlite',
+  },
 
   // ── Sitemap ──────────────────────────────────────────────
   site: {
@@ -26,6 +39,7 @@ export default defineNuxtConfig({
       { label: 'URL', width: '65%' },
       { label: 'Last Modified', select: 'sitemap:lastmod', width: '25%' },
     ],
+    exclude: ['/admin/**'],
   },
 
   // ── @nuxt/image ──────────────────────────────────────────
