@@ -1,6 +1,5 @@
 import Database from 'better-sqlite3'
 import { drizzle } from 'drizzle-orm/better-sqlite3'
-import { migrate } from 'drizzle-orm/better-sqlite3/migrator'
 import bcrypt from 'bcrypt'
 import { users, pages, navigation, settings } from './schema'
 import * as schema from './schema'
@@ -12,8 +11,6 @@ const ADMIN_PASSWORD = process.env.SEED_ADMIN_PASSWORD ?? 'Admin1234!'
 
 const sqlite = new Database(DB_PATH)
 const db = drizzle(sqlite, { schema })
-
-migrate(db, { migrationsFolder: './server/db/migrations' })
 
 const existing = db.select().from(users).where(eq(users.email, ADMIN_EMAIL)).get()
 
